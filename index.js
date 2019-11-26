@@ -1,4 +1,4 @@
-var url = "https://kijonma-62733.firebaseio.com/last-test.json";
+var url = "https://kijonma-62733.firebaseio.com/last.json";
 
 var $daniButton;
 var $eszterButton;
