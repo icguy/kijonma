@@ -1,4 +1,8 @@
-var url = "https://kijonma-62733.firebaseio.com/last.json";
+var isLive = !window.location.href.startsWith("file://");
+var url = isLive
+	? "https://kijonma-62733.firebaseio.com/last.json"
+	: "https://kijonma-62733.firebaseio.com/last-test.json";
+
 
 var $daniButton;
 var $eszterButton;
@@ -14,15 +18,17 @@ function refreshLast() {
 			$("#last").text(text);
 
 			if (result.name === "Eszter") {
-				$eszterButton.removeClass("mod-selected");
-				$daniButton.addClass("mod-selected");
+				$eszterButton.hide();
+				$daniButton.show();
 				$nowText.text("Dani");
 			}
 			if (result.name === "Dani") {
-				$daniButton.removeClass("mod-selected");
-				$eszterButton.addClass("mod-selected");
+				$daniButton.hide();
+				$eszterButton.show();
 				$nowText.text("Eszter");
 			}
+
+			$(".container").show();
 		}
 	});
 }

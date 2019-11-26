@@ -6,17 +6,12 @@ body {
 }
 
 .melun-button {
-	background-color: transparent;
     border: .5rem solid #070;
     border-radius: 2rem;
     font-size: 3rem;
-    color: #070;
 	padding: 2rem;
 	margin: 1rem;
 	outline: none;
-}
-
-.melun-button.mod-selected {
 	background-color: #070;
 	color: #f5f5dc;
 }
